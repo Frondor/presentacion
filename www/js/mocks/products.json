@@ -1,0 +1,50 @@
+[
+	{
+		"id": "1",
+		"name": "Product Name",
+		"category": "Product category",
+		"price": 100.00,
+		"comments": "3",
+		"favs": 6
+	},
+	{
+		"id": "2",
+		"name": "Product 1",
+		"category": "Product category",
+		"price": 71.00,
+		"comments": "0",
+		"favs": 2
+	},
+	{
+		"id": "3",
+		"name": "Product 2",
+		"category": "Product category",
+		"price": 55.00,
+		"comments": "3",
+		"favs": 17
+	},
+	{
+		"id": "4",
+		"name": "Product 3",
+		"category": "Product category",
+		"price": 22.00,
+		"comments": "5",
+		"favs": 15
+	},
+	{
+		"id": "5",
+		"name": "Product 4",
+		"category": "Product category",
+		"price": 10.00,
+		"comments": "13",
+		"favs": 21
+	},
+	{
+		"id": "6",
+		"name": "Product 5",
+		"category": "Product category",
+		"price": 30.00,
+		"comments": "7",
+		"favs": 10
+	}
+]

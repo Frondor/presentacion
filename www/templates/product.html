@@ -1,0 +1,74 @@
+<ion-view view-title="{{ product.catName }}" class="view-blur">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="hero has-mask slide-up" style="background-image: url('{{ 'img/products/product' + product.id + '.jpg'}}')">
+            <div class="content">
+                <button class="button button-icon flat waves-effect waves-button waves-light icon ion-chatbubbles pull-right text-white" ng-click="tab = 1" ng-class="tab == 1 ? ' light' : ''"></button>
+                <button class="button button-icon flat waves-effect waves-button waves-light icon ion-map pull-right text-white" ng-click="tab = 0" ng-class="tab == 0 ? ' light' : ''"></button>
+            </div>
+        </div>
+        <div class="mid-bar med-header-blur z1">
+            <h3>{{ product.name }} <small class="stable">({{ product.unit }})</small></h3>
+            <p>
+                <span class="price-cash"><i class="ion-social-usd"></i> {{ product.price }}</span> | 
+                <span class="price-points"><i class="ion-coffee"></i> {{ pricePS }}</span>
+            </p>
+        </div>
+
+        <ion-slide-box show-pager="false" active-slide="tab" class="padding-bottom">
+            <ion-slide>
+                <div class="content double-padding">
+                    <h4 class="positive">Descripción</h4>
+                    <p class="text-muted">
+                        {{ product.desc }}
+                    </p>
+                    <rating rates="4"></rating>
+                    
+                    <strong>¡Comparte este producto!</strong>
+                    <div class="button-bar">
+                      <a class="button button-calm"><i class="ion-social-twitter"></i></a>
+                      <a class="button button-positive"><i class="ion-social-facebook"></i></a>
+                      <a class="button button-assertive"><i class="ion-social-googleplus"></i></a>
+                      <a class="button button-balanced"><i class="ion-social-instagram-outline"></i></a>
+                    </div>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <h4 class="content padding double-padding-x">Comentarios</h4>
+                <div class="list animate-fade-slide-in-right">
+                    <a href="javascript:;" ng-repeat="comment in comments track by comment.uid" class="item item-avatar item-icon-right" ng-class="comment.uid == 1 ? ' in done' : ''">
+                        <img ng-src="img/users/{{ comment.uid }}.jpg">
+                        <h2>{{ comment.name }}</h2>
+                        <p>{{  comment.body }}</p>
+                        <i class="icon ion-chatbubble muted"></i>
+                    </a>
+                    <div class="padding">
+                        <button ng-click="openModal()" class="button button-block button-positive">
+                          Comentar
+                        </button>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    <script id="comment-modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header background-principal">
+          <h1 class="title">Añadir comentario</h1>
+          <div class="buttons buttons-right header-item">
+            <span class="right-buttons">
+                <button class="button button-icon button-clear ion-close-round" ng-click="modal.hide()">
+                </button>
+            </span>
+        </div>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <div class="card">
+            <label class="item item-input">
+                <textarea ng-model="asdqwe" placeholder="Escribe un comentario"></textarea>
+            </label>            
+          </div>
+        <button class="button button-full button-positive" ng-click="newComment(asdqwe)">Enviar</button>
+        </ion-content>
+      </ion-modal-view>
+    </script>
+    </ion-content>
+</ion-view>

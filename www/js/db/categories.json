@@ -1,0 +1,26 @@
+[
+	{
+		"id": "cafe",
+		"name": "Café",
+		"desc": "Category description",
+		"img_src": "category1.jpg"
+	},
+	{
+		"id": "bebidas",
+		"name": "Otras bebidas",
+		"desc": "Category description",
+		"img_src": "category2.jpg"
+	},
+	{
+		"id": "alimentos",
+		"name": "Alimentos",
+		"desc": "Category description",
+		"img_src": "category3.jpg"
+	},
+	{
+		"id": "extras",
+		"name": "Especiales",
+		"desc": "Category description",
+		"img_src": "category4.jpg"
+	}
+]

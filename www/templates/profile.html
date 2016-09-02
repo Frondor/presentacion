@@ -1,0 +1,53 @@
+<ion-view view-title="Perfil" ng-init="tab = 0">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/blur-1.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url({{ profile.img_src }});"></div>
+                <h3><a class="light">{{ profile.name }}</a></h3>
+                <h4>{{ profile.mail }}</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-icon-top static tabs-striped tabs-top tabs-color-light small-header-blur">
+            <a ng-click="tab = 0" class="tab-item" ng-class="tab == 0 ? ' active' : ''">
+                <i class="icon ion-ios-pulse-strong"></i> Actividad
+            </a>
+            <a ng-click="tab = 1" class="tab-item" ng-class="tab == 1 ? ' active' : ''">
+                <i class="icon ion-android-star-outline"></i> Favoritos
+            </a>
+            <a ng-click="tab = 2" class="tab-item" ng-class="tab == 2 ? ' active' : ''">
+                <i class="icon ion-android-options"></i> Opciones
+            </a>
+        </div>
+        <ion-slide-box show-pager="false" active-slide="tab" class="padding-bottom">
+            <ion-slide>
+                <h4 class="content padding double-padding-x">Últimos comentarios</h4>
+                <div class="list animate-fade-slide-in-right">
+                    <a ui-sref="app.friends" class="item item-avatar item-icon-right">
+                        <img ng-src="{{ profile.img_src }}">
+                        <h2>Más que recomendado</h2>
+                        <p>en <strong>Pebetes</strong></p>
+                        <i class="icon ion-chatbubble muted"></i>
+                    </a>
+                    <a ui-sref="app.friends" class="item item-avatar item-icon-right">
+                        <img ng-src="{{ profile.img_src }}">
+                        <h2>Super sano!</h2>
+                        <p>en <strong>Licuados</strong></p>
+                        <i class="icon ion-chatbubble muted"></i>
+                    </a>
+                    <a ui-sref="app.friends" class="item item-avatar item-icon-right">
+                        <img ng-src="{{ profile.img_src }}">
+                        <h2>Perfecto para un día lluvioso</h2>
+                        <p>en <strong>Café - Capuchino</strong></p>
+                        <i class="icon ion-chatbubble muted"></i>
+                    </a>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                Esto es un lindo slide
+            </ion-slide>
+            <ion-slide>
+                Esto es un lindo slide
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,40 @@
+<ion-view view-title="{{ viewTitle }}" class="view-blur">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <div class="list half">
+            <div animate-repeat ng-click="showProduct(product)" ng-repeat="product in products | limitTo:products.length/2:0" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2 class="small-header-blur light">{{ product.name }}</h2>
+                    <img class="full-image" ng-src="img/products/product{{product.id}}.jpg">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item stable-bg" ng-class="product.favs ? 'assertive' : 'dark'">
+                        <i class="icon ion-heart"></i>
+                        {{ product.favs }}
+                    </a>
+                    <a class="tab-item stable-bg" ng-class="product.comments ? 'positive-900' : 'dark'">
+                        <i class="icon ion-chatbubbles"></i>
+                        {{ Math.round(product.favs/2) }}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="list half">
+            <div animate-repeat ng-click="showProduct(product)" ng-repeat="product in products | limitTo:products.length/2:products.length/2" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2 class="small-header-blur light">{{ product.name }}</h2>
+                    <img class="full-image" ng-src="img/products/product{{product.id}}.jpg">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item stable-bg" ng-class="product.favs ? 'assertive' : 'dark'">
+                        <i class="icon ion-heart"></i>
+                        {{ product.favs }}
+                    </a>
+                    <a class="tab-item stable-bg" ng-class="product.comments ? 'positive-900' : 'dark'">
+                        <i class="icon ion-chatbubbles"></i>
+                        {{ product.comments.length }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

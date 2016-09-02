@@ -1,0 +1,136 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive-900 background-principal" ng-class="{expanded: isExpanded, 'has-header-fab-left': hasHeaderFabLeft, 'has-header-fab-right': hasHeaderFabRight}" align-title="left">
+            <ion-nav-back-button class="no-text">
+            </ion-nav-back-button>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="fabContent"></ion-nav-view>
+        <ion-nav-view name="menuContent" ng-class="{expanded: isExpanded}" ></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-header-bar class="expanded bar bar-header has-tabs-top text-center center" style="background: url('img/menu-bg.jpg');background-size: cover">
+            <span style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0, 0, 0, 0.24);z-index: 0"></span>
+            <span style="background: url('img/cafeserrano2-bw.png');background-size: cover;width: 100px;display: block;height: 100px;margin: 0 auto;margin-top: 20px;z-index: 2;"></span>
+            <h2 class="light">Menu</h2>
+        </ion-header-bar>
+        <ion-content class="view-blur has-expanded-header">
+        <ion-slide-box show-pager="false" active-slide="tab" >
+            <ion-slide>
+                <ion-list>
+                    <div ng-show="pedido" class="item" nav-clear menu-close>
+                        <button class="button button-small button-full button-positive" ui-sref="app.pedido">1 pedido activo</button>
+                    </div>
+                    <ion-item class="item item-icon-left" nav-clear menu-close ui-sref="app.profile">
+                        <i class="icon ion-android-person"></i> Mi perfil
+                    </ion-item>
+                    <ion-item class="item item-icon-left" nav-clear menu-close ui-sref="app.categories">
+                        <i class="icon ion-coffee"></i> La carta
+                    </ion-item>
+                    <ion-item class="item item-icon-left" ng-click="showPaquete()">
+                        <i class="icon ion-bag"></i> Paquetes
+                    </ion-item>
+                    <ion-item class="item item-icon-left" nav-clear menu-close ui-sref="app.categories">
+                       <i class="icon ion-help-buoy"></i> Ayuda
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+            <ion-slide>
+                <div class="list card">
+                    <div class="item">
+                        <p>Puedes cargar crédito a tu cuenta</p>
+                        <p>a través de los siguientes métodos:</p>
+                    </div>
+                    <div class="padding-horizontal">
+                        <button class="button button-full button-small button-balanced">Tarjetas de crédito</button>
+                    </div>
+                    <div class="padding-horizontal">
+                        <button class="button button-full button-small button-energized">PayPal</button>
+                    </div>
+                    <div class="padding-horizontal">
+                        <button class="button button-full button-small button-calm">Abitab</button>
+                    </div>
+                    <div class="padding-horizontal">
+                        <button class="button button-full button-small button-positive">RedPagos</button>
+                    </div>
+                </div>
+                <div class="padding-horizontal">
+                    <button class="button button-small button-full button-assertive" ng-click="$parent.$parent.tab = 0"><i class="pull-left ion-ios-arrow-back"></i> Atrás</button>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="list card">
+                  <div class="item item-text-wrap">
+                    <p>Los <strong>Puntos Serranos</strong>, simbolizados con <i class="ion-coffee"></i> en la aplicación, son la moneda generada automáticamente según el valor de cada compra efectuada dentro de la misma.</p>
+                    <br>
+                    <p>Su uso no es más ni menos que servir de alternativa al efectivo a la hora de abonar un pedido.</p>
+                  </div>
+                </div>
+                <div class="padding-horizontal">
+                    <button class="button button-small button-full button-assertive" ng-click="$parent.$parent.tab = 0"><i class="pull-left ion-ios-arrow-back"></i> Atrás</button>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="list card">
+                    <div ng-repeat="product in cart track by product.id" class="item item-avatar" href="#" on-double-tap="removeItem($index)" style="min-height: 50px;padding-left: 70px;padding-right: 60px;border-bottom: 1px solid #cecece;">
+                      <img ng-src="{{'img/products/product'+product.id+'.jpg'}}" style="margin-top: -10px">
+                        {{product.name}}
+                        <span class="badge badge-assertive" ng-show="product.cantidad > 1">{{product.cantidad}}</span>
+                    </div>
+                </div>
+                <div class="list" ng-show="cart.length > 0">
+                    <ion-toggle ng-model="currency" toggle-class="toggle-assertive">Pagar con {{ currency ? 'PS' : 'efectivo' }}</ion-toggle>
+                    <div class="item" style="min-height: 25px">
+                        <h2>Total: <i ng-class="currency ? 'ion-coffee' : 'ion-social-usd'"></i> {{getTotal(currency)}}</h2>
+                    </div>
+                    <div class="item" style="padding: 0 20px;">
+                        <h4 ng-show="!currency" class="padding-vertical assertive ng-binding">¡Estás generando {{getPS()}} PS!</h4>
+                    </div>
+                    <div class="item text-center" style="padding: 0 20px;">
+                        <button class="button button-small button-full button-positive" ng-click="finalizarPedido(currency); $parent.$parent.tab = 0">Finalizar pedido</button>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+            <div class="tabs tabs-icon-top tabs-striped itsmenu small-header-blur light">
+              <a class="tab-item" ng-click="tab = 1" ng-class="tab == 1 ? ' active' : ''">
+                <i class="icon ion-cash"></i>
+                {{ currentUser.cash }}
+              </a>
+              <a class="tab-item" ng-click="tab = 2" ng-class="tab == 2 ? ' active' : ''">
+                <i class="icon ion-coffee"></i>
+                {{ currentUser.points | number:1}}
+              </a>
+              <a class="tab-item" ng-disabled="!cart.length" ng-click="tab = 3" ng-class="tab == 3 ? ' active' : ''">
+                <i class="icon ion-android-cart"></i>
+                {{cart.length}}
+              </a>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+    <script id="paquete-modal.html" type="text/ng-template">
+    <div class="list">
+        <a class="item item-icon-left" ng-click="addItems()">
+            <i class="icon ion-bag"></i>
+            Mi super pack
+            <i class="pull-right ion-arrow-right-c"></i>
+            <i class="pull-right ion-compose" style="padding-right: 10px"></i>
+        </a>
+        <a class="item item-icon-left" >
+            <i class="icon ion-bag"></i>
+            Va como piña
+            <i class="pull-right ion-arrow-right-c"></i>
+            <i class="pull-right ion-compose" style="padding-right: 10px"></i>
+        </a>
+        <a class="item item-icon-left" >
+            <i class="icon ion-bag"></i>
+            La previa
+            <i class="pull-right ion-arrow-right-c"></i>
+            <i class="pull-right ion-compose" style="padding-right: 10px"></i>
+        </a>
+    </div>
+    </script>
+</ion-side-menus>

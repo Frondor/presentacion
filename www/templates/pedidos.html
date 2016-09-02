@@ -1,0 +1,32 @@
+<ion-view view-title="Pedido #21" class="view-blur">
+    <ion-content ng-class="{expanded:isExpanded}">
+
+    <div class="list card" ng-show="elestado == 'balanced-bg'" ng-class="{' animated slideInDown': elestado == 'balanced-bg'}">
+    	<ion-scroll zooming="true" >
+    		<img src="img/map.jpg">
+		 </ion-scroll>
+    </div>
+
+    	<div class="list card">
+			  <div class="padding-horizontal item-divider" ng-class="elestado" ng-click="changeState()">
+			    Estado: {{elestadotext}}
+			  </div>
+        <div ng-repeat="product in pedido track by product.id" class="item item-avatar" href="#" style="min-height: 60px;padding-left: 70px;padding-right: 60px;border-bottom: 1px solid #cecece;">
+          <img ng-src="{{'img/products/product'+product.id+'.jpg'}}" style="margin-top: -10px">
+            {{product.name}}
+            <span class="badge badge-assertive" ng-show="product.cantidad > 1">{{product.cantidad}}</span>
+        </div>
+    	</div>
+
+			<div class="list card">
+
+			  <label class="item item-input item-stacked-label">
+    			<span class="input-label">Dirección</span>
+			    <input type="text" ng-model="pedido_address" placeholder="{{currentUser.address}}" ng-focus="! pedido_address  ? pedido_address = currentUser.address : pedido_address = pedido_address" ng-blur="pedido_address != currentUser.address ? '' : pedido_address = null">
+			  </label>
+
+			</div>
+
+    </ion-content>
+</ion-view>
+

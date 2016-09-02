@@ -1,0 +1,18 @@
+<ion-view view-title="¿Qué merendamos hoy?">
+    <ion-content ng-class="{expanded:isExpanded}">
+<div class="background-principal">
+  <label class="item-input light slideInDown animated">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Buscar un producto">
+  </label>
+</div>
+<div class="list condensed-space no-padding animate-blinds">
+    <div ng-repeat="cat in categories track by cat.id" class="card dark-bg"> <!-- dark-bg energized-bg etc-->
+        <a ui-sref="app.products({catId: cat.id})" class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+            <h2 style="height: 30px">{{ cat.name }}</h2>
+            <img ng-src="{{ 'img/categories/' + cat.img_src }}">
+        </a>
+    </div>
+</div>
+    </ion-content>
+</ion-view>

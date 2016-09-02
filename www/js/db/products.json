@@ -1,0 +1,507 @@
+[
+	{
+		"id": 1,
+		"category": "cafe",
+		"img_src": "product1.jpg",
+		"name": "Expresso",
+		"unit": "200ml",
+		"price": 45.00,
+		"favs": 12,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"category": "cafe",
+		"img_src": "product2.jpg",
+		"name": "Latte Macchiato",
+		"unit": "350ml",
+		"price": 65.00,
+		"favs": 25,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"category": "bebidas",
+		"img_src": "product3.jpg",
+		"name": "Té de frutas",
+		"unit": "250ml",
+		"price": 30.00,
+		"favs": 5,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 4,
+		"category": "cafe",
+		"img_src": "product4.jpg",
+		"name": "Submarino",
+		"unit": "350ml",
+		"price": 60.00,
+		"favs": 14,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 5,
+		"category": "bebidas",
+		"img_src": "product5.jpg",
+		"name": "Licuado de Frutas",
+		"unit": "350ml",
+		"price": 40.00,
+		"favs": 8,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 6,
+		"category": "cafe",
+		"img_src": "product6.jpg",
+		"name": "Capuchino",
+		"unit": "350ml",
+		"price": 60.00,
+		"favs": 32,
+		"desc": "Nada como un delicioso Capuchino a la mañana para arrancar el día. Y tomarse el tiempo del mundo para degustarlo.",
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 7,
+		"category": "cafe",
+		"img_src": "product7.jpg",
+		"name": "Vienés",
+		"unit": "300ml",
+		"price": 65.00,
+		"favs": 3,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 8,
+		"category": "bebidas",
+		"img_src": "product8.jpg",
+		"name": "Té (N, R, V)",
+		"unit": "250ml",
+		"price": 25.00,
+		"favs": 11,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 9,
+		"category": "bebidas",
+		"img_src": "product9.jpg",
+		"name": "Chocolatada",
+		"unit": "350ml",
+		"price": 35.00,
+		"favs": 19,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 10,
+		"category": "bebidas",
+		"img_src": "product10.jpg",
+		"name": "Jugo de Naranja",
+		"unit": "350ml",
+		"price": 45.00,
+		"favs": 15,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 11,
+		"category": "alimentos",
+		"img_src": "product11.jpg",
+		"name": "Muffins",
+		"unit": "x1",
+		"price": 22.00,
+		"favs": 9,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 12,
+		"category": "alimentos",
+		"img_src": "product12.jpg",
+		"name": "Alfajores de Maicena",
+		"unit": "x1",
+		"price": 12.00,
+		"favs": 2,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 13,
+		"category": "alimentos",
+		"img_src": "product13.jpg",
+		"name": "Pan de banana",
+		"unit": "porc.",
+		"price": 20.00,
+		"favs": 6,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 14,
+		"category": "alimentos",
+		"img_src": "product14.jpg",
+		"name": "Lemon Pie",
+		"unit": "porc.",
+		"price": 75.00,
+		"favs": 4,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 15,
+		"category": "alimentos",
+		"img_src": "product15.jpg",
+		"name": "Cheese Cake",
+		"unit": "porc.",
+		"price": 70.00,
+		"favs": 3,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 16,
+		"category": "alimentos",
+		"img_src": "product16.jpg",
+		"name": "Choco Flan",
+		"unit": "porc.",
+		"price": 50.00,
+		"favs": 11,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 17,
+		"category": "alimentos",
+		"img_src": "product17.jpg",
+		"name": "Tarta de Frutas",
+		"unit": "porc.",
+		"price": 50.00,
+		"favs": 8,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 18,
+		"category": "alimentos",
+		"img_src": "product18.jpg",
+		"name": "Postre Chajá",
+		"unit": "porc.",
+		"price": 65.00,
+		"favs": 22,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 19,
+		"category": "alimentos",
+		"img_src": "product19.jpg",
+		"name": "Brownies",
+		"unit": "porc.",
+		"price": 45.00,
+		"favs": 1,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 20,
+		"category": "alimentos",
+		"img_src": "product20.jpg",
+		"name": "Bizcochuelo",
+		"unit": "x1",
+		"price": 75.00,
+		"favs": 4,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 21,
+		"category": "alimentos",
+		"img_src": "product21.jpg",
+		"name": "Trufas",
+		"unit": "kg.",
+		"price": 220.00,
+		"favs": 5,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 22,
+		"category": "alimentos",
+		"img_src": "product22.jpg",
+		"name": "Media-lunas",
+		"unit": "x1",
+		"price": 30.00,
+		"favs": 7,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 23,
+		"category": "alimentos",
+		"img_src": "product23.jpg",
+		"name": "Pebetes",
+		"unit": "kg.",
+		"price": 175.00,
+		"favs": 16,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 24,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Donas glaseadas",
+		"unit": "x1",
+		"price": 30.00,
+		"favs": 36,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 25,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Alfajores de Chocolate",
+		"unit": "x1",
+		"price": 15.00,
+		"favs": 11,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 26,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Budín Mandarina",
+		"unit": "porc.",
+		"price": 20.00,
+		"favs": 3,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 27,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Principe Humberto",
+		"unit": "porc.",
+		"price": 70.00,
+		"favs": 27,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 28,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Selva Negra",
+		"unit": "porc.",
+		"price": 60.00,
+		"favs": 21,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 29,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Torta Fanta",
+		"unit": "porc.",
+		"price": 30.00,
+		"favs": 4,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 30,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Pasta Frola",
+		"unit": "porc.",
+		"price": 40.00,
+		"favs": 21,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 31,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Isla Flotante",
+		"unit": "porc.",
+		"price": 50.00,
+		"favs": 15,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 32,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Macarons",
+		"unit": "x1",
+		"price": 20.00,
+		"favs": 5,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 33,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Ojitos",
+		"unit": "x1",
+		"price": 12.00,
+		"favs": 21,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 34,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Masitas",
+		"unit": "kg.",
+		"price": 320.00,
+		"favs": 6,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 35,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Sandwiches",
+		"unit": "x1",
+		"price": 12.00,
+		"favs": 16,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	},
+	{
+		"id": 36,
+		"category": "alimentos",
+		"img_src": "product.jpg",
+		"name": "Tartas Saladas",
+		"unit": "x1",
+		"price": 70.00,
+		"favs": 2,
+		"comments": [
+			{
+				"author": "Fulano"
+			}
+		]
+	}
+]

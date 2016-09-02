@@ -1,0 +1,42 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header background-principal">
+    <h1 class="title">Añadir al pedido</h1>
+    <div class="buttons buttons-right header-item">
+      <span class="right-buttons">
+          <button class="button button-icon button-clear ion-close-round" ng-click="modal.hide()">
+          </button>
+      </span>
+  </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="hero has-mask" style="background-image: url('{{ 'img/products/product' + product.id + '.jpg'}}')">
+        <div class="content">
+        	<h3 class="text-left padding-horizontal padding-vertical">{{ product.name }} <small class="stable">({{product.unit}})</small></h3>
+        </div>
+    </div>
+    <div class="padding">
+	    <div class="list">
+			  <label class="item item-input" ng-init="!product.cantidad ? product.cantidad = 1 : null">
+			    <span class="input-label">Cantidad:</span>
+			    <input type="number" ng-model="product.cantidad" class="custom-input" autofocus>
+			  </label>
+			  <label class="item item-input item-stacked-label">
+			    <span class="input-label">Nota:</span>
+			    <textarea ng-model="product.note" class="custom-input" rows="5" placeholder="¿Hay algo que deberíamos saber respecto a tu {{product.name}}?"></textarea>
+			  </label>
+			</div>
+			<div class="text-center">
+				<button ng-if="!cartSent" ng-click="sendCart()" class="button button-assertive-900" style="transition:none">
+					<div class="title">
+						<i class="ion-android-cart"></i> Añadir y volver
+					</div>	  
+				</button>
+				<button ng-if="cartSent" class="button button-balanced" style="transition:none">
+					<div class="title">
+						<i class="ion-checkmark-round"></i> ¡Pedido actualizado!
+					</div>	  
+				</button>
+			</div>
+    </div>
+  </ion-content>
+</ion-modal-view>
